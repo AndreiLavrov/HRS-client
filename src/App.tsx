@@ -1,9 +1,9 @@
 import React, {FC, useContext, useEffect, useState} from 'react';
-import LoginForm from "src/components/LoginForm";
-import {Context} from "src/index";
+import LoginForm from "./components/LoginForm";
+import {Context} from "./index";
 import {observer} from "mobx-react-lite";
-import {IUser} from "src/models/IUser";
-import UserService from "src/services/UserService";
+import {IUser} from "./models/IUser";
+import UserService from "./services/UserService";
 
 const App: FC = () => {
     const {store} = useContext(Context);

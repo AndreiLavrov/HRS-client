@@ -1,4 +1,4 @@
-import {IUser} from "src/models/IUser";
+import {IUser} from "../../models/IUser";
 
 export interface AuthResponse {
     accessToken: string;

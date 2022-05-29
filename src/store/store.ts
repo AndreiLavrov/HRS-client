@@ -1,9 +1,9 @@
-import {IUser} from "src/models/IUser";
+import {IUser} from "../models/IUser";
 import {makeAutoObservable} from "mobx";
-import AuthService from "src/services/AuthService";
+import AuthService from "../services/AuthService";
 import axios from 'axios';
-import {AuthResponse} from "src/models/response/AuthResponse";
-import {API_URL} from "src/http";
+import {AuthResponse} from "../models/response/AuthResponse";
+import {API_URL} from "../http";
 
 export default class Store {
     user = {} as IUser;
@@ -52,7 +52,7 @@ export default class Store {
 
     async logout() {
         try {
-            const response = await AuthService.logout();
+            await AuthService.logout();
             localStorage.removeItem('token');
             this.setAuth(false);
             this.setUser({} as IUser);
