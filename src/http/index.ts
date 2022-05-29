@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {AuthResponse} from '../models/response/AuthResponse';
 
-// export const API_URL = `http://localhost:5000/api`; // TODO: add .env
+// export const API_URL = `http://localhost:5000/api`; // TODO: maybe add .env
 export const API_URL = `https://hrs-server2022.herokuapp.com`;
 
 const $api = axios.create({
