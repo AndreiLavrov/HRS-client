@@ -13,7 +13,7 @@ const App: FC = () => {
         if (localStorage.getItem('token')) {
             store.checkAuth();
         }
-    }, [])
+    }, [store]);
 
     async function getUsers() {
         try {
